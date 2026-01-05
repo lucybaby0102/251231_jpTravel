@@ -1,0 +1,20 @@
+{
+  "name": "gulp-pug-sass-to-docs",
+  "private": true,
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}

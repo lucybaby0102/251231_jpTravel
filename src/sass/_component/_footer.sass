@@ -1,0 +1,84 @@
+.copyright
+	text-align: center
+
+	ul
+		list-style: none
+		display: inline-block
+		margin: 0
+		padding: 0
+
+		li
+			float: left
+			margin: 0 30px
+			min-height: 40px
+			color:#c0c0c0
+			vertical-align: middle
+			display: block
+
+		&:first-child
+			margin-left: 0
+
+		&:last-child
+			margin-right: 0
+
+		&:nth-child(2)
+			width: 86px
+
+	.text
+		font-size: 12px
+		line-height: 1.6em
+		margin-top: 0px
+		text-align: center
+
+	.rating
+		width: 40px
+		display: inline-block
+
+	li span
+		vertical-align: top
+		display: inline-block
+		font-size: 12px
+		text-align: left
+		line-height: 1.1
+
+	.cp
+		color: #c0c0c0
+		margin: 10px 0 0
+		padding: 10px 0 0
+		border-top: 1px solid #4b4a58
+		text-align: center
+
+	footer
+		margin: 0
+		position: relative
+		z-index: 4
+		background: #23222b
+		padding: 30px 0
+
+	@media (max-width: 600px)
+		.copyright
+			text-align: left
+
+			ul li:last-child
+				margin: 0
+
+	@media (max-width: 480px)
+		.copyright ul li
+			margin: 0 12px
+
+			&:first-child
+				width: 150px
+
+			&:nth-child(2)
+				width: 66px
+				padding: 5px 0 0
+
+		.form_txt p, .copyright .cp, .tab-content ul li a
+			font-size: 12px
+
+		.copyright
+			.rating
+				width: 10%
+
+			li span
+				width: 88%

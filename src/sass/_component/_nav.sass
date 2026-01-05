@@ -1,0 +1,117 @@
+.header
+	left: 0
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 15
+	transition: .5s
+	mix-blend-mode: difference
+	+media-pc
+		mix-blend-mode: hard-light
+		background-color: #636363
+		-webkit-backdrop-filter: blur(4px)
+		backdrop-filter: blur(4px)
+	.header_inner 
+		align-items: center
+		display: flex
+		justify-content: space-between
+		padding: 56px 24px 20px
+		background-color: rgba(0,0,0,.11)
+		margin: -4px
+		+media-pc
+			padding:20px 56px
+			background-color: rgba(255,255,255,0)
+		.header_logo 
+			width: 100px
+			+media-pc
+				width: 120px
+		.header_hamburger
+			background: 0 0
+			border: none
+			height: 10px
+			outline: 0
+			position: relative
+			transition: .5s
+			width: 35px
+			+media-pc
+				display: none
+			&::before, &::after
+				content: ""
+				width: 35px
+				height: 1px
+				position: absolute
+				right: 0
+				transition: .5s
+				background: #fff
+			&::before
+				top: 1px
+			&::after
+				top: 8px
+		.is-pc
+			display: none
+			+media-pc
+				display: inline-block
+		.header_nav-pc
+			ul
+				display: flex
+				li
+					display: inline-block
+					& + li
+						padding-left: 40px
+		.is-active
+			&::before
+				top: 10px
+				transform: rotate(45deg)
+			&::after
+				top: 10px
+				transform: rotate(-45deg)
+				width: 35px
+	
+
+	.is-sp
+		display: block
+	.header_nav-sp
+		height: 100vh
+		left: 0
+		opacity: 0
+		padding: 148px 24px
+		position: fixed
+		top: 0
+		transition: .5s
+		visibility: hidden
+		width: 100vw
+		z-index: -15
+		overflow-y: auto
+		&::before
+			content: ""
+			width: 100%
+			height: 100%
+			background: rgba(0, 0, 0, .8)
+			position: absolute
+			top: 0
+			left: 0
+		.header_nav
+			color: #fff
+			li
+				padding-bottom: 16px
+				margin-bottom: 16px
+				font-size: 18px
+				font-size: 4.8vw
+				letter-spacing: 1px
+				position: relative
+				color: #fff
+
+				&:last-child
+					margin-bottom: 0
+				a
+					color: #f1f2f5
+					isplay: block
+	
+	.is-navList
+		opacity: 1
+		transition: .5s
+		visibility: visible
+
+
+.header.blend-mode
+	mix-blend-mode: inherit

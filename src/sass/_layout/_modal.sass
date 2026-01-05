@@ -1,0 +1,146 @@
+.modal
+  background: url(../images/bg-event.png) no-repeat 50% 0
+  background-size: cover
+  background-attachment: fixed
+  z-index: 999
+  padding-top: 50px
+  &#exampleModal0
+    h1
+      width: 80%
+  // &#exampleModal6
+  //   li
+  //     &:nth-of-type(2),
+  //     &:nth-of-type(4),
+  //     &:nth-of-type(6),
+  //     &:nth-of-type(8)
+  //       list-style-type: none
+  .modal-content
+    background: none
+    border: none
+  .modal-body
+    text-align: center
+    h2
+      margin: 30px 0 15px
+      color: $mainColor
+    h5
+      font-size: 1.6rem
+      line-height: 1.8rem
+      color: $mainColor
+      margin: 2rem 0 0.6rem
+    h6
+      font-size: 15px
+      background: rgba(205, 148, 96, .6)
+      color: $white
+      padding: 10px 0
+      width: 100%
+    li
+      color: $lightgray
+      font-size: 16px
+      line-height: 24px
+      list-style-type: circle
+      text-indent: -22px
+      width: 100%
+      +media-narrow
+        font-size: 13px
+    .table
+      h2
+        margin: 0
+    .survey
+      margin-bottom: -55px
+
+button.close
+  opacity: 1
+  position: absolute
+  right: 0
+  width: 70px
+  height: 70px
+  font-size: 70px
+  font-weight: lighter
+  color: $mainColor
+  text-shadow: none
+  overflow: hidden
+  border: solid 1px $mainColor
+  border-radius: 70px
+  z-index: 9
+  +media-sptb
+    width: 50px
+    height: 50px
+    font-size: 50px
+  +media-narrow
+    top: -2vh
+    right: 4vw
+  span
+    display: block
+  &:hover
+    background-color: $mainColor
+    color: #000000
+
+.eventflex
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: flex-start
+  margin: 0 auto 1rem auto
+  table
+    margin: 0 !important
+  img
+    margin: 0.6rem
+    +media-narrow
+      margin: 0
+  strong
+    font-weight: bold
+    color: $tableColor
+
+.modal-backdrop
+  display: none
+#nav-tab
+  position: relative
+  border: unset
+  button
+    position: absolute
+    background-color: unset
+    font-size: 20px
+    line-height: 40px
+    min-height: 40px
+    max-width: 33%
+    border-image-source: url('../images/border_material.png')
+    border-image-slice: 30
+    border-image-width: 1px
+    border-image-repeat: round
+    left: 50%
+    top: 100px
+    
+    p
+      margin-top: 0px
+    &#nav-north-tab
+      transform: translate(-50%, -50px)
+      +media-narrow
+        transform: translate(-50%, -80px)
+      &.active
+        background-color: #17202c
+    &#nav-east-tab
+      transform: translate(calc(-50% - 150px), 0px)
+      +media-narrow
+        transform: translate(calc(-50% - 120px), 0px)
+      &.active
+        background-color: #853c00
+    &#nav-mid-tab
+      transform: translate(-50%, 0px)
+      &.active
+        background-color: #38321e
+    &#nav-west-tab
+      transform: translate(calc(-50% + 150px), 0px)
+      +media-narrow
+        transform: translate(calc(-50% + 120px), 0px)
+      &.active
+        background-color: #084227
+    &#nav-south-tab
+      transform: translate(-50%, +50px)
+      +media-narrow
+        transform: translate(-50%, +80px)
+      &.active
+        background-color: #960000
+#nav-tabContent
+  margin-top: 200px
+  +media-narrow
+    margin-top: 260px

@@ -1,0 +1,60 @@
+// media query
+$media-narrow-s: 375px
+$media-narrow: 480px
+$media-pad: 768px
+$media-sp: 991px
+$media-tablet: 992px
+// $media-pc-2: 1000px
+$media-pc: 1200px
+$media-pcWide: 1001px
+
+@mixin media-narrow-s 
+	@media only screen and (max-width: $media-narrow) 
+		@content
+@mixin media-narrow 
+	@media only screen and (max-width: $media-narrow) 
+		@content
+
+@mixin media-pad
+	@media only screen and (max-width: $media-pad)
+		@content
+
+@mixin media-sp
+	@media only screen and (max-width: $media-sp)
+		@content
+	
+@mixin media-sptb 
+	@media only screen and (max-width: $media-pc) 
+		@content
+
+// @mixin media-sptb-2 
+// 	@media only screen and (max-width: $media-pc-2) 
+// 		@content
+	
+@mixin media-tablet 
+	@media only screen and (min-width: $media-tablet) and (max-width: $media-pc) 
+		@content
+	
+@mixin media-pctb
+	@media only screen and (min-width: $media-tablet) 
+		@content
+	
+@mixin media-pc 
+	@media only screen and (min-width: $media-pcWide )
+		@content
+
+@mixin media-ie
+	@media all and (-ms-high-contrast: none)
+		@content
+
+@mixin media-custom($min: 0, $max: 10000)
+	@media only screen and (min-width: $min) and (max-width: $max)
+		@content
+
+@mixin media-custom-max($max: 10000)
+	@media only screen and (max-width: $max)
+		@content
+
+@mixin media-custom-min($min: 0)
+	@media only screen and (min-width: $min)
+		@content

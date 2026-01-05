@@ -1,0 +1,439 @@
+// .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover,.nav-tabs>li>a:hover,.nav-tabs>li>a,.nav-tabs
+// 	background-color: unset
+// 	border: unset
+// 	line-height: unset
+// li
+// 	list-style: none
+// body::-webkit-scrollbar 
+// 	display: none
+html
+	font-family: "fot-tsukuaoldmin-pr6n", serif
+body
+	color: #fff
+	font-weight: 500
+	word-break: break-all
+	p
+		font-size: 13px
+		line-height: 1.8
+		position: relative
+	a
+		margin: 0
+		padding: 0
+		font-size: 100%
+		vertical-align: baseline
+		background: 0 0
+		color: inherit
+		width: 100%
+		text-decoration: none
+	img
+		max-width: 100%
+		height: auto
+		vertical-align: bottom
+
+.mainVisual
+	position: relative
+	&::before
+		content: ""
+		display: block
+		position: fixed
+		// min-height: 100vh
+		// align-items: center
+		background: url('https://img.technews.tw/wp-content/uploads/2020/12/08132944/female-tourists-travel-map-624x378.jpg') no-repeat center bottom
+		background-size: cover
+		background-position: center right 55%
+		height: 100%
+		width: 100%
+		z-index: -1
+		+media-sptb
+			// min-height: auto
+
+	.mainVisual_inner
+		padding: 1% 20px 30%
+
+		.mainVisual_word
+			height: 70svh
+			display: flex
+			align-items: flex-end
+			transform: translateY(-32px)
+			+media-pc 
+				margin: 0 0 0 1.5vw
+			p
+				font-size: 6.4vw
+				line-height: 1.2
+				letter-spacing: 3px
+				+media-pc 
+					font-size: 3vw
+					line-height: 1.4
+			span
+				display: block
+				font-size: 10px
+				font-size: 2.6666666667vw
+				margin-top: 16px
+				letter-spacing: 3px
+				+media-pc
+					font-size: 1.5vw
+
+		.mainVisual_concept
+			padding: 120% 0 0
+			+media-pc
+				padding: 30% 0 0 40%
+			h1
+				font-size: 40px
+				font-size: 9.666667vw
+				line-height: 1
+				font-weight: 400
+				text-shadow: 0 1px 5px #705a39
+				+media-pc
+					font-size: 4.2666666667vw
+				span
+					font-size: 12px
+					font-size: 3.2vw
+					display: block
+					margin-top: 24px
+					color: #ffebbd
+					+media-pc
+						font-size: 1.45vw
+			.ja
+				font-size: 14px
+				font-size: 3.7333333333vw
+				line-height: 2.5
+				margin-top: 56px
+				+media-pc
+					font-size: 1.6vw
+					line-height: 2
+			.readmore
+				display: inline-block
+				margin-top: 56px
+				position: relative
+				font-size: 12px
+				font-size: 3.2vw
+				text-decoration: underline
+				+media-pc
+					font-size: 4px
+					font-size: 1.5vw
+					max-width: 50%
+					margin: 72px auto
+					
+			.readmore-left
+				+media-pc
+					max-width: 50%
+					margin: inherit
+					margin-top: 72px
+
+.topics
+	background-color: #333
+	padding: 108px 0
+	.inner
+		padding: 0 24px
+		+media-pc
+			padding: 0 108px
+		.heading-2
+			font-size: 10.1333333333vw
+			text-align: left
+			+media-pc
+				font-size: 3.2vw
+	.topicsSwiper
+		.swiper-wrapper
+			transition-timing-function: linear
+		.topicsList
+			margin-top: 40px
+			padding: 0
+			+media-pc
+				padding: 0 108px
+			li
+				a
+					display: block
+					text-decoration: none
+					color: inherit
+					.topicsList_image
+						aspect-ratio: 16 / 9
+						overflow: hidden
+						box-shadow: 0 20px 30px 5px rgba(0, 0, 0, .15)
+						img
+							width: 100%
+							height: 100%
+							object-fit: cover
+					.topicsList_number
+						display: flex
+						align-items: center
+						margin-top: 16px
+						time
+							color: #999
+						p
+							margin-left: 16px
+							background-color: #a3a3a3
+							color: #fff
+							padding: 0 8px
+							border-radius: 3px
+						time, p
+							+media-pc
+								font-size: .7933333vw
+					.topicsList_description
+						text-align: left
+						margin-top: 16px
+						font-size: 3.6vw
+						+media-pc
+							font-size: 1vw
+							margin-top: 5px
+			.swiper-slide
+				width: clamp(260px, 78vw, 480px)
+
+.story
+	padding: 105px 0
+	text-align: center
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 57%,rgba(255,255,255,1) 85%,rgba(0,0,0,1) 99%)
+	color: #000
+	overflow: hidden
+	+media-pad
+		padding: 35px 0
+	.word-group
+		max-width: 80%
+		margin: auto
+		padding-bottom: 50px
+		+media-pad
+			max-width: 90%
+		.tit
+			padding: 50px 0
+			h2
+				font-size: 7.666667vw
+				line-height: 1
+				font-weight: 400
+				+media-pc
+					font-size: 2.5vw
+		p
+			font-size: 3.5vw
+			padding: 0px 30px
+			+media-pc
+				font-size: 1.2vw
+	.photo-group
+		display: flex
+		justify-content: center
+		gap: 30px
+		+media-pad
+			flex-direction: column
+			gap: 10px
+		figure
+			opacity: 0
+			transform: translate3d(var(--from-x, 0px), var(--from-y, 0px), 0)
+			will-change: transform, opacity
+			width: 100%
+			max-width: 500px
+			flex: 0 0 50%
+			transition: transform .5s
+			+media-pad
+				// margin-top: 10px
+			&.is-reveal
+				opacity: var(--op, 1)
+				transform: translate3d(var(--tx, 0px), var(--ty, 0px), 0)
+			&:nth-of-type(2)
+				// transform: translateY(50px)
+				position: relative
+				top: 50px
+				+media-pad
+					top: 0px
+
+			&:hover
+				transform: scale(1.05)
+				cursor: pointer
+
+
+/* ===== Festival 區塊 ===== */
+.festival
+	position: relative
+	padding: 48px 0
+	background: center / cover no-repeat
+	overflow: hidden
+	padding: 2vw 0px 10vw
+	max-height: 900px
+	+media-pad
+		padding: 108px 0
+		padding: 100vw 0px 5vw
+	.festivalBg
+		position: absolute
+		inset: 0
+		z-index: 0
+		will-change: transform
+		pointer-events: none
+		&::after
+			content: ""
+			position: absolute
+			inset: -100px 0
+			background: rgba(0,0,0,.25)
+		.festivalBg_img
+			position: absolute
+			inset: -80px 0
+			background-image: var(--festival-bg-url)
+			background-position: center
+			background-size: cover
+			background-repeat: no-repeat
+			opacity: 1
+			// transform: scale(1.12)
+			transform-origin: center
+			transition: opacity .8s ease, transform 6s ease
+			will-change: transform, opacity
+	// &.is-bg-active
+	// 	.festivalBg_img
+	// 		opacity: 1
+	// 		transform: scale(1.08)
+	.wrap
+		position: relative
+		z-index: 2
+		padding: 0px 36px 0 5vw
+
+		.heading
+			margin-bottom: 18px
+			font-size: 6.1333333333vw
+			// text-align: left
+			+media-pc
+				font-size: 4.2vw
+					
+
+		.tabBlock-box
+			position: relative
+			z-index: 1
+			padding: 18px
+			min-height: 520px
+			+media-pad
+				padding: 14px
+				min-height: auto
+			
+			.row.g-0
+				display: flex
+				gap: 18px
+				min-height: 520px
+				+media-pad
+					flex-direction: column
+					min-height: auto
+					gap: 12px
+
+				.col-md-3
+					display: flex
+					align-items: flex-end
+					margin-bottom: 17%
+					+media-pad
+						width: 100%
+						max-width: 100%
+						margin-bottom: 0
+						
+
+
+
+					.tabBlock_nav
+						width: 80%
+						padding: 5px
+						background: rgb(255 255 255 / 35%)
+						border-radius: 5px
+						+media-pad
+							display: flex
+							flex-direction: row
+							gap: 2px
+							padding: 0
+							overflow-x: auto
+							-webkit-overflow-scrolling: touch
+							width: 100%
+					
+						.nav-item
+							+media-pad
+								flex: 0 0 auto
+							.nav-link
+								border-radius: 1px
+								margin-bottom: 10px
+								padding: 11px 10px
+								font-weight: 700
+								color: #111
+								line-height: 1.35
+								+media-pad
+									white-space: nowrap
+									margin-bottom: 0
+
+								&.active
+									background: rgb(28 28 28 / 45%)
+									border-color: #333
+									color: #ffffff
+				
+				.col-md-9
+					display: flex
+					width: 100%
+
+				.tab-content.content
+					width: 100%
+					display: flex
+
+					.tab-pane
+						width: 100%
+						
+
+	.panel
+		min-height: 100%
+		display: flex
+		flex-direction: column
+
+		.desc
+			margin-top: auto
+			margin-left: auto
+			max-width: 780px
+			line-height: 1.7
+			font-weight: 100
+			background: rgb(50 49 66 / 82%)
+			padding: 10px 5px 10px 40px
+			border-radius: 5px
+			+media-pad
+				margin: 0
+				max-width: none
+			ol
+				list-style: disc
+
+.footer
+	background-color: #000
+	color: #f3f3f3
+	padding: 20px 0 10px
+	position: relative
+	+media-pc
+		padding: 104px 0 70px
+	.inner
+		padding: 0 24px
+		+media-pc
+			padding: 0 108px
+		.footer_flex
+			display: flex
+			justify-content: space-between
+			+media-pad
+				align-items: center
+			.footer_logo
+				padding-top: 0px
+				max-width: 140px
+				margin: 0
+				
+				+media-pc
+					padding-top: 0
+					margin: 0
+					max-width: 252px
+					// margin: auto
+				// +media-pad
+				// 	transform: translateY(50%)
+				a > img
+					width: 100%
+				.info__address
+					padding-top: 10px
+			.footer_nav
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				
+				+media-pc
+					flex-direction: row
+					align-items: center
+				li
+					padding: 10px 0
+					+media-pc
+						padding-right: 15px
+			&:nth-of-type(2)
+				justify-content: flex-start
+				padding-top: 30px
+				gap: 5px
+				a
+					width: auto
+					
+			&:nth-of-type(3)
+				justify-content: center
+				padding-top: 25px

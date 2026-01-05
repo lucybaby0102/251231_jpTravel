@@ -1,0 +1,195 @@
+#pop1#pop2#pop3
+	width: 100%
+	max-width: 235px
+
+#pop1 
+	background: url('../images/revision-news1-off.png')no-repeat
+	background-size: contain
+	height: 234px
+	position: relative
+
+#pop2 
+	background: url('../images/revision-news2-off.png')no-repeat
+	background-size: contain
+	height: 234px
+	position: relative
+
+#pop3 
+	background: url('../images/revision-news3-off.png')no-repeat
+	background-size: contain
+	height: 234px
+	position: relative
+
+#pop1:hover
+	background: url('../images/revision-news1-on.png')no-repeat
+	background-size: contain
+	width: 235px
+	height: 234px
+
+#pop2:hover
+	background: url('../images/revision-news2-on.png')no-repeat
+	background-size: contain
+	width: 235px
+	height: 234px
+
+#pop3:hover
+	background: url('../images/revision-news3-on.png')no-repeat
+	background-size: contain
+	width: 235px
+	height: 234px
+
+.pop 
+	position: fixed
+	top: 100px
+	z-index: 999
+	width: 100%
+
+.pop .popArea 
+	width: 55%
+	max-width: 749px
+	height: calc(100vh - 10rem)
+	overflow-y: scroll
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 1001
+	border: 2px solid #4a4a78
+
+/* 變更卷軸 */
+	.popArea::-webkit-scrollbar-track
+
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+	background-color: #4a414a
+	border-radius: 10px
+
+.popArea::-webkit-scrollbar
+	width: 16px
+	background-color: #4a414a
+
+.popArea::-webkit-scrollbar-thumb
+	border-radius: 7px
+	background-image: -webkit-gradient(linear,
+	left bottom,
+	left top,
+	color-stop(0.44, rgb(170 138 191)),
+	color-stop(0.72, rgb(134 105 169)),
+	color-stop(0.86, rgb(139 118 197)))
+
+/* 隱藏捲軸 */
+/* .popArea::-webkit-scrollbar
+	display: none
+ */
+/* 變更卷軸 */
+.popStart 
+	width: 163px
+	height: 163px
+	position: absolute
+	cursor: pointer
+	z-index: 1
+	left: 50%
+	top: 50%
+	margin-left: -81.5px
+	-webkit-transform: translateY(-50%)
+	-o-transform: translateY(-50%)
+	transform: translateY(-50%)
+	background:unset
+	border: none
+
+.btnclose 
+	width: 55%
+	max-width: 749px
+	margin: auto
+	position: relative
+	z-index: 1005
+
+.btnclose button 
+	width: 70px
+	height: 80px
+	background: transparent url("../images/btn-close.png") no-repeat 0 100%
+	background-size: 100%
+	background-position: top right
+	cursor: pointer
+	padding: 0
+	border: none
+	outline: none
+	position: absolute
+	right: 19px
+
+.overlay 
+	z-index: 1000
+	position: fixed
+	bottom: 0
+	top: 0
+	right: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.75)
+
+.scrollbar
+	margin-left: 30px
+	float: left
+	width: 55%
+	max-width: 749px
+	height: calc(100vh - 13rem)
+	overflow-y: scroll
+	margin-bottom: 25px
+
+.force-overflow
+	min-height: 450px
+
+@media screen and (max-width:768px)
+	#pop1,
+	#pop2,
+	#pop3
+	width: calc(100% / 3)
+	height: 150px
+	background-size: contain
+	background-position: 50% 50%
+
+#pop1
+	background: url('../images/revision-news1-on.png')no-repeat
+	background-size: contain
+	width: 235px
+	height: 234px
+
+#pop2
+	background: url('../images/revision-news2-on.png')no-repeat
+	background-size: contain
+	width: 235px
+	height: 234px
+
+#pop3
+	background: url('../images/revision-news3-on.png')no-repeat
+	background-size: contain
+	width: 235px
+	height: 234px
+
+#pop1:hover,
+#pop2:hover,
+#pop3:hover
+	width: calc(100% / 3)
+	height: 150px
+	background-size: contain
+	background-position: 50% 50%
+
+.popStart
+	width: 115px
+	height: 117px
+
+.pop .popArea
+	height: calc(100vh - 10rem)
+	width: 100%
+
+.btnclose
+	width: 100%
+
+.btnclose button
+		width: 45px
+		height: 45px
+		right: 0
+
+.popArea::-webkit-scrollbar
+		width: 10px

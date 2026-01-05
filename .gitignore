@@ -1,0 +1,16 @@
+# .gitignore 檔案內容範例
+# dependencies
+node_modules/
+
+# editor
+.vscode/
+
+# build / output
+dist/
+
+# OS
+.DS_Store
+
+# large media (do NOT commit)
+docs/media/*.mp4
+*.mp4

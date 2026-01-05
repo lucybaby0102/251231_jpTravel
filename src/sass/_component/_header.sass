@@ -1,0 +1,230 @@
+body
+  position: relative
+
+#particles-js
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  z-index: 999
+  pointer-events: none
+main
+  position: relative
+  width: 100%
+  height: 125vh
+  background: url('../images/main_bg.jpg') no-repeat center bottom
+  background-size: cover
+  overflow: hidden
+  transition: 2s all
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    background: url('../images/cloud.jpg') no-repeat center bottom
+    width: 1920px
+    height: 1292px
+  +media-pad
+    height: 115vh
+  +media-narrow
+    height: 100vh
+  .falling-leaves
+    
+  // 角色位置
+  .char
+    position: absolute
+    transform: translate(-50%,-50%)
+    width: 100%
+
+    &.char1
+      max-width: 272px
+      left: 18%
+      top: 47%
+      +media-sptb
+        width: 19%
+        left: 17%
+      +media-pad
+        width: 26%
+        top: 45%
+      +media-narrow
+        width: 32%
+        left: 19%
+      
+
+    &.char2
+      max-width: 435px
+      right: 27%
+      top: 46%
+      transform: translate(50%,-50%)
+      z-index: 1
+      +media-sptb
+        width: 30%
+      +media-pad
+        width: 41%
+        right: 41%
+        top: 40%
+      +media-narrow
+        top: 46%
+        width: 49%
+        right: 37%
+    &.char3
+      max-width: 338px
+      right: 17%
+      top: 46%
+      transform: translate(50%,-50%)
+      +media-sptb
+        width: 23%
+      +media-pad
+        right: 18%
+        top: 41%
+        width: 33%
+      +media-narrow
+        width: 37%
+        top: 44%
+        // transform: translate(55%, -50%)
+    &.char4
+      max-width: 337px
+      left: 25%
+      top: 50%
+      z-index: 2
+      +media-sptb
+        width: 25%
+      +media-pad
+        left: 35%
+        width: 34%
+        top: 44%
+      +media-narrow
+        width: 41%
+        left: 37%
+        top: 50%
+
+
+  .light
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 100%
+    transform: translate(-50%,-50%)
+    mix-blend-mode: lighten
+    pointer-events: none
+  .bubbles
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 100%
+    transform: translate(-50%,-50%)
+    pointer-events: none
+  .logo
+    position: absolute
+    max-width: 100%
+    width: 300px
+    top: 80px
+    left: 0
+    margin: auto
+    right: 0
+    z-index: 99
+    display: block
+    filter: brightness(100%) drop-shadow(0px 0px 15px #000)
+    transition: filter .3s 
+    &:hover
+      filter: brightness(120%) drop-shadow(0px 0px 15px #000)
+    +media-sptb 
+      left: 0%
+      width: 100%
+      top: 22%
+    +media-sp
+      // top: 65%
+    +media-pad
+      top: 28%
+    +media-narrow
+      width: 60%
+      top: 41%
+      a
+        display: inline-block
+
+  // 主視覺標題
+  .con
+    position: absolute
+    width: 100vw
+    max-width: 1400px
+    left: 0
+    right: 0
+    top: 20%
+    margin: auto
+    z-index: 5
+    +media-sptb
+      top: 30%
+    +media-pad
+      top: 33%
+      width: 95%
+    +media-narrow
+      top: 50%
+      
+    .title
+      position: relative
+      max-width: 100%
+      margin: auto
+      width: 80%
+      display: block
+      +media-sptb 
+        width: 70%
+      +media-pad
+        width: 100%
+      // +media-narrow
+      //   width: 100%
+    .sub_title
+      position: relative
+      max-width: 80%
+      width: 80%
+      margin: auto
+      display: block
+      margin-top: -130px
+      +media-sptb
+        margin-top: -70px
+        max-width: 60%
+      +media-narrow
+        margin-top: -30px
+        max-width: 70%
+    // 彈窗按鈕
+    .tab_btn_wrapper
+      position: relative
+      width: 80%
+      margin: auto
+      margin-top: 20px
+      display: flex
+      justify-content: space-around
+      +media-sptb
+        margin-bottom: 100px
+      +media-narrow
+        flex-wrap: wrap
+      .tab_btn_box
+        display: flex
+        .tab_btn
+          cursor: pointer
+
+    .main_signup
+      position: absolute
+      bottom: 0px
+      left: 50%
+      transform: translateX(-50%)
+      +media-narrow
+        width: 40%
+
+
+
+
+
++media-narrow
+  ::-webkit-scrollbar
+    display: none  
+::-webkit-scrollbar 
+  width: 68px
+::-webkit-scrollbar-track
+  background: url('../images/scroll_track.png') no-repeat center center
+  background-size: contain
+    
+::-webkit-scrollbar-thumb
+  background: url('../images/scroll_thumb.png') no-repeat top center
+  background-size: contain
+  border-radius: 10px
