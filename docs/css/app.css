@@ -334,9 +334,10 @@ body img {
   justify-content: center;
   gap: 30px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
   .story .photo-group {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
 }
