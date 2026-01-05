@@ -367,7 +367,7 @@ body img {
   padding: 48px 0;
   background: center/cover no-repeat;
   overflow: hidden;
-  padding: 2vw 0px 10vw;
+  padding: 4vw 0px 10vw;
   max-height: 900px;
 }
 @media only screen and (max-width: 768px) {
@@ -488,8 +488,11 @@ body img {
   }
 }
 .festival .wrap .tabBlock-box .row.g-0 .col-md-3 .tabBlock_nav .nav-item .nav-link.active {
-  background: rgba(28, 28, 28, 0.45);
-  border-color: #333;
+  background: rgba(42, 47, 90, 0.45);
+  color: #ffffff;
+}
+.festival .wrap .tabBlock-box .row.g-0 .col-md-3 .tabBlock_nav .nav-item .nav-link:hover {
+  background: rgba(42, 47, 90, 0.45);
   color: #ffffff;
 }
 .festival .wrap .tabBlock-box .row.g-0 .col-md-9 {
