@@ -365,7 +365,9 @@ body img {
 .festival {
   position: relative;
   padding: 48px 0;
-  background: center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
   padding: 4vw 0px 10vw;
   max-height: 900px;
