@@ -766,6 +766,9 @@ body img {
 .header .header_inner .header_nav-pc ul li + li {
   padding-left: 40px;
 }
+.header .header_inner .header_nav-pc ul li a:hover {
+  color: #fffd18;
+}
 .header .header_inner .is-active::before {
   top: 10px;
   transform: rotate(45deg);
