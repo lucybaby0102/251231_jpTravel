@@ -255,6 +255,22 @@ $(function () {
 	const festival = document.querySelector(".festival");
 	if (festival) {
 		const tabs = document.querySelectorAll(".tabBlock_nav .nav-link");
+		
+		 //  預載入：把所有 data-bg 的圖片先抓進快取
+		const preloadBgImages = () => {
+			const urls = new Set(
+			Array.from(tabs)
+				.map((t) => t.dataset.bg)
+				.filter(Boolean)
+			);
+
+			urls.forEach((url) => {
+			const img = new Image();
+			img.decoding = "async";
+			img.loading = "eager";
+			img.src = url;
+			});
+		};
 
 		function setFestivalBg(url) {
 			if (!url) return;
@@ -269,12 +285,13 @@ $(function () {
 			}
 		}
 
-	// 初始背景
-	const active = document.querySelector(".tabBlock_nav .nav-link.active");
-		if (active && active.dataset.bg) {
-			setFestivalBg(active.dataset.bg);
-		}
-
+		// 初始背景
+		const active = document.querySelector(".tabBlock_nav .nav-link.active");
+			if (active && active.dataset.bg) {
+				setFestivalBg(active.dataset.bg);
+			}
+		//  一進頁面就預載（建議放在初始背景之後也行）
+		preloadBgImages();
 		// Tab 切換
 		tabs.forEach((tab) => {
 			tab.addEventListener("shown.bs.tab", (e) => {

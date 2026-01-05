@@ -56,7 +56,7 @@ body {
   word-break: break-all;
 }
 body p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
   position: relative;
 }
@@ -258,6 +258,12 @@ body img {
   color: #fff;
   padding: 0 8px;
   border-radius: 3px;
+}
+@media only screen and (max-width: 768px) {
+  .topics .topicsSwiper .topicsList li a .topicsList_number p {
+    background: transparent;
+    font-size: 17px;
+  }
 }
 @media only screen and (min-width: 1001px) {
   .topics .topicsSwiper .topicsList li a .topicsList_number time, .topics .topicsSwiper .topicsList li a .topicsList_number p {
